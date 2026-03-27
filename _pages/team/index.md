@@ -26,12 +26,12 @@ rank: 2
 
 <div class="pi-card">
   <div class="pi-photo-col">
-    <img src="/images/team/zohar.jpeg" alt="Dr. Zohar Arnon" class="pi-photo">
+    <img src="{{ site.baseurl }}/images/team/zohar.jpeg" alt="Dr. Zohar Arnon" class="pi-photo">
     <div class="pi-links">
       <a href="mailto:zoharnon@gmail.com" class="pi-link-btn">✉ Email</a>
       <a href="https://scholar.google.com/citations?user=zohar-arnon" target="_blank" rel="noopener" class="pi-link-btn">Google Scholar</a>
       <a href="https://www.linkedin.com/in/zohar-arnon-b19137115" target="_blank" rel="noopener" class="pi-link-btn">LinkedIn</a>
-      <span class="pi-orcid"><a href="https://orcid.org/0000-0003-2915-5930" target="_blank" rel="noopener"><img src="/images/team/orcid.png" alt="ORCID" class="orcid-icon"> 0000-0003-2915-5930</a></span>
+      <span class="pi-orcid"><a href="https://orcid.org/0000-0003-2915-5930" target="_blank" rel="noopener"><img src="{{ site.baseurl }}/images/team/orcid.png" alt="ORCID" class="orcid-icon"> 0000-0003-2915-5930</a></span>
     </div>
   </div>
 
@@ -67,7 +67,7 @@ rank: 2
 
 <div class="mascot-card">
   <div class="mascot-photo-col">
-    <img src="/images/team/xavi.jpeg" alt="Xavi, Arnon Lab mascot" class="mascot-photo">
+    <img src="{{ site.baseurl }}/images/team/xavi.jpeg" alt="Xavi, Arnon Lab mascot" class="mascot-photo">
   </div>
   <div class="mascot-bio-col">
     <h3 class="pi-name">Xavi</h3>

@@ -32,7 +32,7 @@ rank: 1
 
   <div class="project-body project-body--img-right">
     <div class="project-figure" style="max-width: 340px; margin-top: 4px;">
-      <img src="/images/projects/octa-origami.png"
+      <img src="{{ site.baseurl }}/images/projects/octa-origami.png"
            alt="DNA origami octahedral frame carrying protein cargo, assembled from 6-helix bundle edges">
       <p class="project-fig-caption">
         A DNA origami octahedral frame built from 6-helix bundle edges, carrying
@@ -95,7 +95,7 @@ rank: 1
 
   <div class="project-body project-body--img-right">
     <div class="project-figure" style="max-width: 380px; margin-top: 4px;">
-      <img src="/images/projects/sea-validation.png"
+      <img src="{{ site.baseurl }}/images/projects/sea-validation.png"
            alt="SEA platform: biochemical, cell-based, and tissue-level validation">
       <p class="project-fig-caption">
         Three tiers of SEA platform validation: biochemical assays, cell-based assays,
@@ -150,7 +150,7 @@ rank: 1
 
   <div class="project-body project-body--img-right">
     <div class="project-figure">
-      <img src="/images/projects/superlattice-crystal.png"
+      <img src="{{ site.baseurl }}/images/projects/superlattice-crystal.png"
            alt="3D model of a DNA origami superlattice crystal with octahedral frames">
       <p class="project-fig-caption">
         A DNA origami superlattice crystal: octahedral frames self-assembled through
@@ -206,7 +206,7 @@ rank: 1
   </div>
 
   <div class="project-subfig" style="max-width: 720px; margin-left: auto; margin-right: auto;">
-    <img src="/images/projects/acoustic-org.png"
+    <img src="{{ site.baseurl }}/images/projects/acoustic-org.png"
          alt="Acoustic organization of DNA superlattices: from octahedron to millimeter-scale order">
     <p class="project-fig-caption">
       Acoustic organization: DNA octahedra form simple cubic crystals,

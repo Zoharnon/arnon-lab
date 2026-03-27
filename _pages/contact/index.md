@@ -10,7 +10,7 @@ rank: 7
 
   <div class="contact-card">
     <div class="contact-photo-col">
-      <img src="/images/team/zohar.jpeg" alt="Dr. Zohar Arnon" class="pi-photo">
+      <img src="{{ site.baseurl }}/images/team/zohar.jpeg" alt="Dr. Zohar Arnon" class="pi-photo">
     </div>
     <div class="contact-info-col">
       <h2 class="pi-name">Dr. Zohar Arnon</h2>
@@ -33,7 +33,7 @@ rank: 7
         </div>
         <div class="contact-row">
           <a href="https://orcid.org/0000-0003-2915-5930" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-family:monospace; color:#31688e; border-bottom:1px solid #b0c8e0; text-decoration:none;">
-            <img src="/images/team/orcid.png" alt="ORCID" style="width:16px; height:16px;"> 0000-0003-2915-5930
+            <img src="{{ site.baseurl }}/images/team/orcid.png" alt="ORCID" style="width:16px; height:16px;"> 0000-0003-2915-5930
           </a>
         </div>
       </div>
