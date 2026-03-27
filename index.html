@@ -1,5 +1,8 @@
 ---
 layout: home
+title: Home
+toggle: on
+rank: 0
 ---
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -80,9 +83,9 @@ layout: home
 
     <!-- Nano-to-macro scale strip -->
     <div class="scale-strip">
+
       <div class="scale-node" style="--node-color: #440154;">
         <div class="scale-icon">
-          <!-- DNA double helix icon -->
           <svg width="44" height="56" viewBox="-22 -28 44 56" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#440154" stroke-width="2.2" fill="none" stroke-linecap="round">
               <path d="M -9,-24 C -9,-14 9,-8 9,0 C 9,8 -9,14 -9,24"/>
@@ -101,13 +104,17 @@ layout: home
         </div>
         <div class="scale-label">DNA Strand</div>
         <div class="scale-unit">~1 nm</div>
+        <div class="scale-hover-text">
+          DNA strands can be programmed to precisely interact with other DNA strands
+          attached to proteins, nanoparticles, polymers, and more, making DNA a
+          universal molecular handle for positioning functional cargo.
+        </div>
       </div>
 
       <div class="scale-chevron">&#10095;</div>
 
       <div class="scale-node" style="--node-color: #31688e;">
         <div class="scale-icon">
-          <!-- Octahedron frame icon -->
           <svg width="52" height="56" viewBox="-26 -28 52 56" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#31688e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="0,-24 22,0 0,24 -22,0"/>
@@ -125,20 +132,22 @@ layout: home
         </div>
         <div class="scale-label">DNA Origami</div>
         <div class="scale-unit">10–100 nm</div>
+        <div class="scale-hover-text">
+          By folding a long DNA scaffold with hundreds of short staple strands,
+          we create rigid 3D frames (octahedra, cubes, tetrahedra) with defined
+          attachment sites for nanocargo at nanometer precision.
+        </div>
       </div>
 
       <div class="scale-chevron">&#10095;</div>
 
       <div class="scale-node" style="--node-color: #35b779;">
         <div class="scale-icon">
-          <!-- 3×3 lattice grid icon -->
           <svg width="52" height="56" viewBox="-26 -28 52 56" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#35b779" stroke-width="1.4" fill="none">
-              <!-- horizontal lines -->
               <line x1="-18" y1="-18" x2="18" y2="-18"/>
               <line x1="-18" y1="0"   x2="18" y2="0"/>
               <line x1="-18" y1="18"  x2="18" y2="18"/>
-              <!-- vertical lines -->
               <line x1="-18" y1="-18" x2="-18" y2="18"/>
               <line x1="0"   y1="-18" x2="0"   y2="18"/>
               <line x1="18"  y1="-18" x2="18"  y2="18"/>
@@ -156,13 +165,17 @@ layout: home
         </div>
         <div class="scale-label">Superlattice</div>
         <div class="scale-unit">~1 μm</div>
+        <div class="scale-hover-text">
+          DNA origami frames self-assemble into ordered superlattice crystals
+          whose symmetry and lattice parameters are encoded in the DNA sequence.
+          Each frame in the lattice retains its functional nanocargo intact.
+        </div>
       </div>
 
       <div class="scale-chevron">&#10095;</div>
 
       <div class="scale-node" style="--node-color: #a0d000;">
         <div class="scale-icon">
-          <!-- Acoustic standing wave + organized dots icon -->
           <svg width="52" height="56" viewBox="-26 -28 52 56" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#a0d000" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55">
               <path d="M -22,-20 Q -11,-12 0,-20 Q 11,-28 22,-20"/>
@@ -186,11 +199,39 @@ layout: home
         </div>
         <div class="scale-label">Macrostructure</div>
         <div class="scale-unit">0.1–1 mm</div>
+        <div class="scale-hover-text">
+          Surface patterning and acoustic standing waves organize superlattice
+          crystals into millimeter-scale ordered architectures, bridging six
+          orders of magnitude from molecule to material.
+        </div>
       </div>
+
     </div><!-- .scale-strip -->
 
   </div>
 </section>
+
+<script>
+// Touch devices: tap scale-node to toggle tooltip
+(function() {
+  var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  if (!isTouchDevice) return;
+  var nodes = document.querySelectorAll('.scale-node');
+  nodes.forEach(function(node) {
+    node.addEventListener('click', function(e) {
+      var isOpen = node.classList.contains('touch-open');
+      // Close all
+      nodes.forEach(function(n) { n.classList.remove('touch-open'); });
+      // Toggle this one
+      if (!isOpen) node.classList.add('touch-open');
+      e.stopPropagation();
+    });
+  });
+  document.addEventListener('click', function() {
+    nodes.forEach(function(n) { n.classList.remove('touch-open'); });
+  });
+})();
+</script>
 
 
 <!-- ═══════════════════════════════════════════════════════════

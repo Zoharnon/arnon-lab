@@ -582,6 +582,7 @@ h1.post-title {
 .home-mission {
     padding: 80px 24px;
     background: $surface-light;
+    overflow: visible;
 }
 
 .home-mission-lead {
@@ -651,11 +652,12 @@ h1.post-title {
 // Scale strip
 .scale-strip {
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
     justify-content: center;
     gap: 0;
     margin: 0 auto;
     max-width: 860px;
+    overflow: visible;
 
     @include media-query($on-palm) {
         flex-direction: column;
@@ -669,11 +671,15 @@ h1.post-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 10px;
+    padding: 20px 12px;
     background: rgba(255,255,255,0.85);
     border: 1.5px solid rgba(0,0,0,0.07);
     border-top: 3px solid var(--node-color);
     border-radius: 6px;
+    cursor: default;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    overflow: visible;
+    position: relative;
 
     .scale-icon {
         margin-bottom: 10px;
@@ -681,6 +687,7 @@ h1.post-title {
         align-items: center;
         justify-content: center;
         min-height: 60px;
+        transition: transform 0.22s ease;
     }
 
     .scale-label {
@@ -697,6 +704,65 @@ h1.post-title {
         font-family: monospace;
         letter-spacing: 0.3px;
     }
+
+    .scale-hover-text {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        font-size: 0.78rem;
+        color: #1e2d40;
+        line-height: 1.55;
+        text-align: center;
+        background: #fff;
+        border: 1.5px solid rgba(0,0,0,0.09);
+        border-radius: 8px;
+        padding: 10px 14px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        transform: translateX(-50%) translateY(6px);
+        z-index: 200;
+
+        // Small arrow pointing up
+        &::before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top: none;
+            border-bottom-color: rgba(0,0,0,0.09);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top: none;
+            border-bottom-color: #fff;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        z-index: 100;
+
+        .scale-icon {
+            transform: scale(0.88);
+        }
+
+        .scale-hover-text {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
 }
 
 .scale-chevron {
@@ -711,6 +777,19 @@ h1.post-title {
     @include media-query($on-palm) {
         transform: rotate(90deg);
         flex: 0 0 20px;
+    }
+}
+
+// Touch-tap open state for scale tooltips
+.scale-node.touch-open {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 100;
+
+    .scale-hover-text {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
     }
 }
 
@@ -1513,6 +1592,7 @@ h1.post-title {
     .scale-node {
         flex: 0 0 130px;
         min-width: 130px;
+        cursor: pointer;
     }
     .scale-chevron {
         flex: 0 0 20px;
