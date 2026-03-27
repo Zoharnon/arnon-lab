@@ -106,7 +106,8 @@
             display: none;
         }
 
-        &:hover .trigger {
+        &:hover .trigger,
+        &.open .trigger {
             display: block;
             padding-bottom: 5px;
         }
@@ -1500,13 +1501,29 @@ h1.post-title {
 
     // ── Scale strip: scroll horizontally on small screens ──
     .scale-strip {
+        flex-direction: row;
+        flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-bottom: 12px;
-        gap: 12px;
+        padding-bottom: 16px;
+        gap: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .scale-node {
+        flex: 0 0 130px;
+        min-width: 130px;
     }
     .scale-chevron {
+        flex: 0 0 20px;
         font-size: 1rem;
+    }
+
+    // ── Project header h2: smaller on mobile ──
+    .project-header h2 {
+        font-size: 1.1rem;
+    }
+    .project-number {
+        font-size: 1.6rem;
     }
 
     // ── Research cards: stack to 1 column ──
