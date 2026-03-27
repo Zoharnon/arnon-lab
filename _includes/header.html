@@ -47,3 +47,52 @@ document.getElementById('nav-toggle').addEventListener('click', function(e) {
   this.closest('.site-nav').classList.toggle('open');
 });
 </script>
+
+<!-- Floating "We're Hiring" banner -->
+<div id="hiring-banner" style="
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a2e44;
+  border: 1px solid #35b779;
+  border-radius: 999px;
+  padding: 8px 16px 8px 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #e0f4ec;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+" onmouseover="this.style.boxShadow='0 6px 22px rgba(53,183,121,0.35)'; this.style.transform='translateY(-2px)'"
+   onmouseout="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)'; this.style.transform='translateY(0)'">
+  <span style="
+    width: 8px; height: 8px;
+    background: #35b779;
+    border-radius: 50%;
+    display: inline-block;
+    animation: hiring-pulse 2s infinite;
+    flex-shrink: 0;
+  "></span>
+  <a href="mailto:zoharnon@gmail.com?subject=Joining%20the%20Arnon%20Lab"
+     style="color: #e0f4ec; text-decoration: none; font-weight: 500;">
+    We're hiring!
+  </a>
+  <button onclick="document.getElementById('hiring-banner').style.display='none'; event.stopPropagation();"
+    style="
+      background: none; border: none; cursor: pointer;
+      color: #7ab8a0; font-size: 1rem; line-height: 1;
+      padding: 0 0 0 4px; margin: 0;
+    " title="Dismiss" aria-label="Dismiss hiring banner">×</button>
+</div>
+
+<style>
+@keyframes hiring-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.3); }
+}
+</style>
