@@ -8,8 +8,8 @@ description: >
   The Arnon Lab at Ben-Gurion University of the Negev engineers programmable bionanomaterials —
   bridging DNA nanotechnology, peptide self-assembly, and acoustic field organization
   to connect nanoscale design to macroscale function.
-baseurl: ""
-url: ""
+baseurl: "/arnon-lab"
+url: "https://zoharnon.github.io"
 twitter_username: ""
 github_username: ""
 images_dir: "/images/"
