@@ -1,0 +1,25 @@
+# Site settings
+title: Arnon Lab — Programmable Bionanomaterials
+lab_name: Arnon Lab
+author: Zohar A. Arnon
+institution: BGU
+email: Zoharnon@gmail.com
+description: >
+  The Arnon Lab at Ben-Gurion University of the Negev engineers programmable bionanomaterials —
+  bridging DNA nanotechnology, peptide self-assembly, and acoustic field organization
+  to connect nanoscale design to macroscale function.
+baseurl: ""
+url: ""
+twitter_username: ""
+github_username: ""
+images_dir: "/images/"
+
+# Build settings
+markdown: kramdown
+include: ["_pages"]
+permalink: /:title/
+
+#plugins for search engine optimization
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
