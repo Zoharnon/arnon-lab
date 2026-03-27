@@ -1477,3 +1477,148 @@ h1.post-title {
         grid-template-columns: 1fr;
     }
 }
+
+
+// ═══════════════════════════════════════════════
+//  MOBILE RESPONSIVE — comprehensive overrides
+// ═══════════════════════════════════════════════
+
+@media (max-width: 768px) {
+
+    // ── Homepage hero ──
+    .hero-tagline {
+        font-size: 2.2rem;
+    }
+    .hero-sub {
+        font-size: 1rem;
+    }
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    // ── Scale strip: scroll horizontally on small screens ──
+    .scale-strip {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 12px;
+        gap: 12px;
+    }
+    .scale-chevron {
+        font-size: 1rem;
+    }
+
+    // ── Research cards: stack to 1 column ──
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    // ── Highlights: 1 column ──
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    // ── Join section logos ──
+    .join-logos {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    // ── Projects page ──
+    .projects-page {
+        padding: 0 16px 60px;
+    }
+    .project-block {
+        padding: 24px 18px 20px;
+        margin-bottom: 40px;
+    }
+    .project-body {
+        &.project-body--img-right,
+        &.project-body--img-left {
+            grid-template-columns: 1fr;
+        }
+        .project-figure {
+            order: -1;
+            max-width: 100% !important;
+        }
+    }
+    .project-header h2 {
+        font-size: 1.15rem;
+    }
+    .project-number {
+        font-size: 1.4rem;
+    }
+    .project-pubs {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    // ── Team / People page ──
+    .team-page {
+        padding: 0 16px 60px;
+    }
+    .pi-card {
+        grid-template-columns: 1fr;
+        padding: 24px 18px;
+        text-align: center;
+    }
+    .pi-photo-col {
+        align-items: center;
+    }
+    .pi-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pi-link-btn {
+        flex: 0 0 auto;
+    }
+    .pi-bio-col p {
+        text-align: left;
+    }
+    .mascot-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px 18px;
+    }
+    .mascot-photo-col {
+        justify-content: center;
+    }
+    .recruiting-grid {
+        grid-template-columns: 1fr;
+    }
+
+    // ── Contact page ──
+    .contact-page {
+        padding: 0 16px 60px;
+    }
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 24px 18px;
+        text-align: center;
+    }
+    .contact-photo-col {
+        display: flex;
+        justify-content: center;
+    }
+    .contact-row {
+        justify-content: center;
+        text-align: left;
+    }
+    .contact-join {
+        padding: 24px 18px;
+    }
+
+    // ── Concept figure ──
+    .concept-figure img {
+        width: 100%;
+    }
+
+    // ── Mission section ──
+    .home-mission-lead {
+        font-size: 1rem;
+    }
+}
