@@ -211,27 +211,6 @@ rank: 0
   </div>
 </section>
 
-<script>
-// Touch devices: tap scale-node to toggle tooltip
-(function() {
-  var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-  if (!isTouchDevice) return;
-  var nodes = document.querySelectorAll('.scale-node');
-  nodes.forEach(function(node) {
-    node.addEventListener('click', function(e) {
-      var isOpen = node.classList.contains('touch-open');
-      // Close all
-      nodes.forEach(function(n) { n.classList.remove('touch-open'); });
-      // Toggle this one
-      if (!isOpen) node.classList.add('touch-open');
-      e.stopPropagation();
-    });
-  });
-  document.addEventListener('click', function() {
-    nodes.forEach(function(n) { n.classList.remove('touch-open'); });
-  });
-})();
-</script>
 
 
 <!-- ═══════════════════════════════════════════════════════════

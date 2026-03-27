@@ -705,62 +705,97 @@ h1.post-title {
         letter-spacing: 0.3px;
     }
 
+    // Desktop hover devices: tooltip floats below card
     .scale-hover-text {
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200px;
-        font-size: 0.78rem;
-        color: #1e2d40;
-        line-height: 1.55;
-        text-align: center;
-        background: #fff;
-        border: 1.5px solid rgba(0,0,0,0.09);
-        border-radius: 8px;
-        padding: 10px 14px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-        transform: translateX(-50%) translateY(6px);
-        z-index: 200;
-
-        // Small arrow pointing up
-        &::before {
-            content: '';
-            position: absolute;
-            top: -7px;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 6px solid transparent;
-            border-top: none;
-            border-bottom-color: rgba(0,0,0,0.09);
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 5px solid transparent;
-            border-top: none;
-            border-bottom-color: #fff;
-        }
+        display: none; // hidden by default; shown via media queries below
     }
+}
 
-    &:hover {
-        transform: translateY(-4px) scale(1.03);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-        z-index: 100;
-
-        .scale-icon {
-            transform: scale(0.88);
-        }
+// ── Desktop: real hover support ──────────────────────────────
+@media (hover: hover) and (pointer: fine) {
+    .scale-node {
+        cursor: default;
 
         .scale-hover-text {
+            display: block;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            width: 200px;
+            font-size: 0.78rem;
+            color: #1e2d40;
+            line-height: 1.55;
+            text-align: center;
+            background: #fff;
+            border: 1.5px solid rgba(0,0,0,0.09);
+            border-radius: 8px;
+            padding: 10px 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 200;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 6px solid transparent;
+                border-top: none;
+                border-bottom-color: rgba(0,0,0,0.09);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 5px solid transparent;
+                border-top: none;
+                border-bottom-color: #fff;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            z-index: 100;
+
+            .scale-icon { transform: scale(0.88); }
+
+            .scale-hover-text {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    }
+}
+
+// ── Touch devices: text always visible inline ─────────────────
+@media (hover: none) {
+    .scale-node {
+        cursor: pointer;
+
+        .scale-hover-text {
+            display: block;
+            position: static;
+            transform: none;
+            width: auto;
+            font-size: 0.74rem;
+            color: #3a4e66;
+            line-height: 1.5;
+            text-align: center;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
             opacity: 1;
-            transform: translateX(-50%) translateY(0);
+            margin-top: 8px;
+            pointer-events: auto;
         }
     }
 }
@@ -780,18 +815,6 @@ h1.post-title {
     }
 }
 
-// Touch-tap open state for scale tooltips
-.scale-node.touch-open {
-    transform: scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    z-index: 100;
-
-    .scale-hover-text {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-        pointer-events: auto;
-    }
-}
 
 // ── RESEARCH AREAS ───────────────────────────────────────────
 .home-research {
