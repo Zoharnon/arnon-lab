@@ -23,7 +23,7 @@ rank: 7
       <div class="contact-details">
         <div class="contact-row">
           <span class="contact-icon">✉</span>
-          <a href="mailto:zoharnon@gmail.com">zoharnon@gmail.com</a>
+          <a href="mailto:ArnonZo@bgu.ac.il">ArnonZo@bgu.ac.il</a>
         </div>
         <div class="contact-row">
           <span class="contact-icon">📍</span>
@@ -47,7 +47,7 @@ rank: 7
       about DNA nanotechnology, self-assembly, and programmable bionanomaterials, send me
       an email with your CV and a brief description of your research interests.
     </p>
-    <a href="mailto:zoharnon@gmail.com" class="btn-primary">Send an Email →</a>
+    <a href="mailto:ArnonZo@bgu.ac.il" class="btn-primary">Send an Email →</a>
   </div>
 
 </div>

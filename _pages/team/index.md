@@ -15,7 +15,7 @@ rank: 2
     If you are excited about DNA nanotechnology, self-assembly, and building materials
     that bridge molecular precision with macroscale function, I'd love to hear from you.
   </p>
-  <a href="mailto:zoharnon@gmail.com" class="btn-primary" style="display:inline-block; margin-top: 8px;">Join Us</a>
+  <a href="mailto:ArnonZo@bgu.ac.il" class="btn-primary" style="display:inline-block; margin-top: 8px;">Join Us</a>
 </div>
 
 
@@ -28,7 +28,7 @@ rank: 2
   <div class="pi-photo-col">
     <img src="{{ site.baseurl }}/images/team/zohar.jpeg" alt="Dr. Zohar Arnon" class="pi-photo">
     <div class="pi-links">
-      <a href="mailto:zoharnon@gmail.com" class="pi-link-btn">✉ Email</a>
+      <a href="mailto:ArnonZo@bgu.ac.il" class="pi-link-btn">✉ Email</a>
       <a href="https://scholar.google.com/citations?user=wLumKlwAAAAJ" target="_blank" rel="noopener" class="pi-link-btn">Google Scholar</a>
       <a href="https://www.linkedin.com/in/zohar-arnon-b19137115" target="_blank" rel="noopener" class="pi-link-btn">LinkedIn</a>
       <span class="pi-orcid"><a href="https://orcid.org/0000-0003-2915-5930" target="_blank" rel="noopener"><img src="{{ site.baseurl }}/images/team/orcid.png" alt="ORCID" class="orcid-icon"> 0000-0003-2915-5930</a></span>
@@ -107,7 +107,7 @@ rank: 2
 </div>
 
 <div style="text-align:center; margin-top: 28px;">
-  <a href="mailto:zoharnon@gmail.com" class="btn-primary">Get in Touch →</a>
+  <a href="mailto:ArnonZo@bgu.ac.il" class="btn-primary">Get in Touch →</a>
 </div>
 
 </div><!-- .team-page -->
